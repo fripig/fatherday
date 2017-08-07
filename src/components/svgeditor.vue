@@ -7,15 +7,17 @@
                 <rect width="28" height="22" style="fill:white;" x='39' y='61'>
     
                 </rect>
-                <text x="39" y="60" font-color="black" font-size="4">
-                    <tspan x="39" dy="1.2em" v-for="line in lines">{{line}}</tspan>
+                <text x="52.5" y="60" font-color="black" font-size="4" text-anchor="middle">
+                    <tspan x="52.5" dy="1.2em" >祖克伯祝</tspan>
+                    <tspan x="52.5" dy="1.2em" >「{{fathername}}」</tspan>
+                    <tspan x="52.5" dy="1.2em" >父親節快樂</tspan>
                 </text>
             </g>
         </svg>
     </div>
 </template>
 <script>
-import {bus} from "../bus"
+import { bus } from "../bus"
 
 function chunkSubstr(str, size) {
     var numChunks = Math.ceil(str.length / size),
@@ -30,21 +32,7 @@ function chunkSubstr(str, size) {
 export default {
     props: {
         fathername: ''
-        
-    },
-    data (){
-        return {
-            lines:[]
-        }
-    },
-    watch:{
-        fathername(val,oldVal){
-            if (val !== oldVal  && val.length >0 ){
-                 let data = '祖克伯祝「' + this.fathername + '」父親節快樂';
-                data = chunkSubstr(data, 8)
-                this.lines = data
-            }
-        }
+
     },
     mounted() {
         bus.$on('download', (id) => {
@@ -52,11 +40,6 @@ export default {
         })
     },
     methods: {
-        reset () {
-            let data = '祖克伯祝「' + this.fathername + '」父親節快樂';
-                data = chunkSubstr(data, 8)
-                this.lines = data
-        },
         download: function () {
             var can = document.createElement("canvas")
             var img = document.getElementsByTagName('img')[0];  // http://web.mit.edu/remy/
@@ -84,8 +67,8 @@ export default {
                 a.download = "file.png";
                 a.href = canvas.toDataURL("image/png");
                 a.click();
-                this.reset()
                 svg = svg_backup
+                 bus.$emit('reset', 1)
             }.bind(this);
 
         }
