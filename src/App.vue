@@ -31,6 +31,7 @@ export default {
     }
   },
   mounted() {
+    console.log('mounted')
     bus.$on('reset', (id) => {
       this.reset()
     })
