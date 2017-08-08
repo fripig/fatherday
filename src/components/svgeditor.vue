@@ -5,8 +5,8 @@
 "
                 height="60" width="100" />
             <g>
-                <text x="45" y="39" font-color="#333333" font-size="3" text-anchor="middle">
-                    <tspan x="45" dy="1.2em" v-for="(line,index) in lines" :key="index"  >{{line}}</tspan>
+                <text x="48" y="39" font-color="#333333" font-size="3" text-anchor="middle">
+                    <tspan x="48" dy="1.2em" v-for="(line,index) in lines" :key="index"  >{{line}}</tspan>
                 </text>
             </g>
         </svg>
@@ -32,7 +32,7 @@ export default {
     },
     computed:{
         lines () {
-            return chunkSubstr(this.say2father,8)
+            return chunkSubstr(this.say2father, 7)
         }
     },
     mounted() {
