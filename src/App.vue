@@ -11,7 +11,8 @@
           <input type="checkbox"> 是，確定是全形20個字。多得會被裁掉喔～
         </label>
       </div> -->
-      <button class="btn btn-block btn-lg" style="background: #333333; color: white" @click="download">下載</button>
+      <button class="btn btn-block btn-lg" id="downloadBtn" @click="download">下載</button>
+      <button class="btn btn-block btn-lg" id="resetBtn" @click="reset">重新填寫</button>
     </form>
   </div>
 </template>
@@ -30,6 +31,7 @@ export default {
     }
   },
   mounted() {
+    console.log('mounted')
     bus.$on('reset', (id) => {
       this.reset()
     })
@@ -58,5 +60,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+#downloadBtn{
+  background-color: #333333; 
+  border-color: #111111;
+  color: #eeeeee;
+}
+#resetBtn{
+  background-color: #eeeeee;
+  color: #333333;
+  border-color: #aaaaaa;
 }
 </style>
