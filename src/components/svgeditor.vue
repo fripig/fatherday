@@ -5,8 +5,8 @@
 "
                 height="60" width="100" />
             <g>
-                <text x="48" y="39" font-color="#333333" font-size="3" text-anchor="middle">
-                    <tspan x="48" dy="1.2em" v-for="(line,index) in lines" :key="index"  >{{line}}</tspan>
+                <text x="50" y="39" font-color="#333333" font-size="3" text-anchor="middle">
+                    <tspan x="50" dy="1.2em" v-for="(line,index) in lines" :key="index"  >{{line}}</tspan>
                 </text>
             </g>
         </svg>
