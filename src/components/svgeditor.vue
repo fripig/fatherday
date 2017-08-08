@@ -72,7 +72,7 @@ export default {
                 a.download = "file.png";
                 a.href = canvas.toDataURL("image/png");
                 a.click();
-                 bus.$emit('reset', 1)
+                 // bus.$emit('reset', 1)
             }.bind(this);
 
         }

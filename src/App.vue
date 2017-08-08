@@ -12,6 +12,7 @@
         </label>
       </div> -->
       <button class="btn btn-block btn-lg" style="background: #333333; color: white" @click="download">下載</button>
+      <button class="btn btn-block btn-lg" style="background: #eeeeee; color: 333333" @click="reset">重新填寫</button>
     </form>
   </div>
 </template>
