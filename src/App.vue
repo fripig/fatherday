@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    讓臉書創辦⼈⾺克祖克伯住每位⽗親⽗親節快樂！
-    輸⼊你想祝福的⽗親名字：<input type="text" v-model="fathername">
-    <svgEditor :fathername="fathername" v-if="show"></svgEditor>
+    <p>讓臉書創辦⼈⾺克祖克伯住每位⽗親⽗親節快樂！</p>
+    <p>輸⼊你想祝福的⽗親名字：<input type="text" v-model="fathername"></p>
     <button @click="download">download</button>
+    <svgEditor :fathername="fathername" v-if="show"></svgEditor>
+    
   </div>
 </template>
 
