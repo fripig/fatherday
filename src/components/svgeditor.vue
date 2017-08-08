@@ -70,11 +70,11 @@ export default {
             image.src = data_uri;
             image.onload = function () {
                 var canvas = document.createElement("canvas");
-                canvas.width = 640;
-                canvas.height = 480;
+                canvas.width = 855;
+                canvas.height = 528;
 
                 var context = canvas.getContext("2d");
-                context.clearRect(0, 0, 640, 480);
+                context.clearRect(0, 0, canvas.width, canvas.height);
                 context.drawImage(image, 0, 0);
 
                 var a = document.createElement("a");
