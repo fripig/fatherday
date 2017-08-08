@@ -5,7 +5,7 @@
 "
                 height="60" width="100" />
             <g>
-                <text x="55" y="35" font-color="black" font-size="3" text-anchor="middle">
+                <text x="55" y="35" font-color="#333333" font-size="3" text-anchor="middle">
                     <tspan x="55" dy="1.2em" v-for="(line,index) in lines" :key="index"  >{{line}}</tspan>
                 </text>
             </g>
