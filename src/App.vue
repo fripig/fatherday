@@ -6,11 +6,11 @@
         <label>打些想對爸爸說的話</label>
         <textarea class="form-control" rows="2" v-model="say2father"></textarea>
       </div>
-      <div class="checkbox">
+      <!-- <div class="checkbox">
         <label>
           <input type="checkbox"> 是，確定是全形20個字。多得會被裁掉喔～
         </label>
-      </div>
+      </div> -->
       <button class="btn btn-block btn-lg" style="background: #333333; color: white" @click="download">下載</button>
     </form>
   </div>
