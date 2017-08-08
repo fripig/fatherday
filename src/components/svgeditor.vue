@@ -6,7 +6,7 @@
                 height="60" width="100" />
             <g>
                 <text x="50.5" y="39" style="fill: #333333" font-size="2.4" text-anchor="middle">
-                    <tspan x="50.5" dy="1.2em" v-for="(line,index) in lines" :key="index"  >{{line}}</tspan>
+                    <tspan x="50.5" :dy="lineHeight" v-for="(line,index) in lines" :key="index"  >{{line}}</tspan>
                 </text>
             </g>
         </svg>
@@ -38,6 +38,15 @@ export default {
     computed:{
         lines () {
             return chunkSubstr(this.say2father, 7)
+        },
+        lineHeight(){
+            switch(this.lines.length){
+                case 1: return "3.6em";break;
+                case 2: return "2.4em";break;
+                case 3: return "1.8em";break;
+                case 4: return "1.5em";break;
+                default: return "1.2em";break;
+            }
         }
     },
     mounted() {
