@@ -12,6 +12,11 @@
         </svg>
     </div>
 </template>
+<style>
+text{
+    font-family:"Arial", "Helvetica", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", DFKai-SB,  sans-serif
+}    
+</style>
 <script>
 import { bus } from "../bus"
 
